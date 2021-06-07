@@ -20,7 +20,7 @@
 9. [Author](#Author)
 
 ## Brief 
-This project is intended to demonstrate the knowledge from training with QA. To do this I was tasked to create an application that generates an object based upon a set of predefined rules, testing the application though unit testing & deploying the application using a CI server and Azure App Service. 
+This project is intended to demonstrate the knowledge from training with QA. To do this I was tasked to create an application that generates an object based upon a set of predefined rules, testing the application though unit testing & deploying the application using Continuous Integration & Azure.
 
 ## Architecture
 
