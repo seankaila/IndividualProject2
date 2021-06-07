@@ -41,9 +41,9 @@ To track and understand the progress of my project I used Trello to create a Kan
 - Tasks completed: Tasks that are completed. 
 - Issues: Issues within the project that need attention
 - Issues resolved: Backlog of previous issues that are no longer a problem. 
-- Out of scope: Epics and user stories that were deemed out of scope dude to the duration of the project being too small.
 
-Link to Kanban Board: 
+Link to Kanban Board: https://dev.azure.com/dharmindraskaila/Individual-Project-2/_boards/board/t/Individual-Project-2%20Team/Stories
+
 ### Risk Management
 
 A simple risk assessment was performed during the project. Each risk was described and evaluated along with a rating to understand the severity of the risk. To expand upon this, I provided an update to each risk checking to see if they changed in anyway.
