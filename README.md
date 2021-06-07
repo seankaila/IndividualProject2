@@ -5,6 +5,7 @@
 2. [Architecture](#Architecture)
     1. [Database ERD](#Database-ERD)
     2. [Use Case Diagram](#Use-Case-Diagram)
+    3. [Service Archetecture Diagram](#Service-Archetecture-Diagram)
 3. [Project Management](#Project-Management)
     1. [Kanban Board](#Kanban-Board)
     2. [Risk Management](#Risk-Management)
@@ -28,6 +29,8 @@ This project is intended to demonstrate the knowledge from training with QA. To 
 
 
 ### Use Case Diagram 
+
+### Service Archetecture Diagram
 
 
 ## Project Management 
