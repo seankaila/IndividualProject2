@@ -6,32 +6,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FrontEnd.Models;
+using System.Net.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public IConfiguration Configuration;
+        public HomeController(IConfiguration configuration)
         {
-            _logger = logger;
+            Configuration = configuration;
         }
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            //var service4 = "https://localhost:44377/service4";
+            var service4 = $"{Configuration["Service4URL"]}/service4";
+            //string testC4 = Configuration.GetSection("Service4URL").Value;
+
+            //var service4 = testC4 + "/service4";
+
+            var Service4ResponceCall = await new HttpClient().GetStringAsync(service4);
+            ViewBag.responceCall = Service4ResponceCall;
             return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
