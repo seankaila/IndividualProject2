@@ -34,8 +34,9 @@ namespace Service4.Controllers
 
 
             var Service4 = $"{Service2ResponceCall} {Service3ResponceCall}";
+            var result = "chicken";
 
-            return Ok(Service4);
+            return Ok(new {Service4, result});
         }
     }
 }

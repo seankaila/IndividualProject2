@@ -14,7 +14,10 @@ namespace Service2.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            var S2 = "chicken";
+            string[] answers = new string[] { "It is Certain", "Without a doubt.", "You may rely on it.", "Most likely"};
+            Random random = new Random();
+            int index = random.Next(answers.Length);
+            var S2 = $"{answers[index]}";
             return S2.ToString();
         }
     }

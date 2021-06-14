@@ -14,8 +14,11 @@ namespace Service3.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            var S3 = "little";
-            return S3.ToString();
+            char[] answers  = { 'A','B', 'C', 'D', 'E'};
+            Random random = new Random();
+            int index = random.Next(answers.Length);
+            var S3 = $"{answers[index]}";
+            return S3.ToString(); 
         }
     }
 }
