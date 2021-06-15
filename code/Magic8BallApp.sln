@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{65EB8652-FFEC-43B6-A7D0-5BB5E7991515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{65EB8652-FFEC-43B6-A7D0-5BB5E7991515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service2", "Service2\Service2.csproj", "{4F14C1CD-DA35-4159-838A-275A9E8338C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service2", "Service2\Service2.csproj", "{4F14C1CD-DA35-4159-838A-275A9E8338C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service3", "Service3\Service3.csproj", "{81B651D0-499E-45D7-AFB0-86158A23A0CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service3", "Service3\Service3.csproj", "{81B651D0-499E-45D7-AFB0-86158A23A0CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service4", "Service4\Service4.csproj", "{7B857875-D383-468E-B4B4-AB66425EEC09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service4", "Service4\Service4.csproj", "{7B857875-D383-468E-B4B4-AB66425EEC09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magic8BallTest", "Magic8BallTest\Magic8BallTest.csproj", "{D66A4DF0-540E-4EDB-8A44-56C8FB416022}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{65EB8652-FFEC-43B6-A7D0-5BB5E7991515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{7B857875-D383-468E-B4B4-AB66425EEC09}.Release|x64.Build.0 = Release|Any CPU
 		{7B857875-D383-468E-B4B4-AB66425EEC09}.Release|x86.ActiveCfg = Release|Any CPU
 		{7B857875-D383-468E-B4B4-AB66425EEC09}.Release|x86.Build.0 = Release|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Debug|x64.Build.0 = Debug|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Debug|x86.Build.0 = Debug|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Release|x64.ActiveCfg = Release|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Release|x64.Build.0 = Release|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Release|x86.ActiveCfg = Release|Any CPU
+		{D66A4DF0-540E-4EDB-8A44-56C8FB416022}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66F7A33E-BD78-4C3E-9B3B-F1809261D8C0}
 	EndGlobalSection
 EndGlobal

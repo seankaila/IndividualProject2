@@ -39,7 +39,7 @@ namespace Service4.Controllers
             return Ok(new {Service4, resultProbability});
         }
 
-        private object probability(string Service3ResponceCall)
+        public object probability(string Service3ResponceCall)
         {
             int resultProbability = 0;
             switch (Service3ResponceCall)

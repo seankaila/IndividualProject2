@@ -24,9 +24,9 @@ namespace FrontEnd.Controllers
             Configuration = configuration;
             repository = repositoryWrapper;
         }
-        
 
-        public async Task<IActionResult> Index()
+
+        public IActionResult Index()
         {
             return View();
         }
@@ -72,7 +72,8 @@ namespace FrontEnd.Controllers
             repository.Save();
             return View();
         }
-            [Route("History")]
+
+        [Route("History")]
         public IActionResult History() //Displays all the records in the Teams table. 
         {
             var history = repository.Historys.FinalALL();
