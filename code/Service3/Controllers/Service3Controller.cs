@@ -14,10 +14,10 @@ namespace Service3.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            char[] answers  = { 'A','B', 'C', 'D', 'E'};
+            char[] Quality  = { 'A','B', 'C', 'D', 'E'};
             Random random = new Random();
-            int index = random.Next(answers.Length);
-            var S3 = $"{answers[index]}";
+            int index = random.Next(Quality.Length);
+            var S3 = $"{Quality[index]}";
             return S3.ToString(); 
         }
     }

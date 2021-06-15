@@ -11,46 +11,73 @@ using Microsoft.Extensions.Configuration;
 using RestSharp;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using FrontEnd.Interfaces;
 
 namespace FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
         public IConfiguration Configuration;
-        public HomeController(IConfiguration configuration)
+        private IRepositoryWrapper repository;
+        public HomeController(IConfiguration configuration, IRepositoryWrapper repositoryWrapper)
         {
             Configuration = configuration;
+            repository = repositoryWrapper;
         }
+        
+
         public async Task<IActionResult> Index()
         {
+            return View();
+        }
+        public async Task<IActionResult> AnswerPage(string question)
+        {
+            if (question == null)
+            {
+                return RedirectToAction("Index");
+            }
             //var service4 = "https://localhost:44377/service4";
             var service4 = $"{Configuration["Service4URL"]}/service4";
-            //string testC4 = Configuration.GetSection("Service4URL").Value;
-
-            //var service4 = testC4 + "/service4";
 
             var Service4ResponceCall = await new HttpClient().GetStringAsync(service4);
             dynamic data = JsonConvert.DeserializeObject<object>(Service4ResponceCall);
             IDictionary<string, JToken> results = data;
             int counter = 0;
-            var object1 = "";
-            var object2 = "";
-            foreach(var result in results)
+            var answer = "";
+            var resultProbability = "";
+            foreach (var result in results)
             {
                 counter = counter + 1;
                 var value = result.Value;
                 if (counter == 1)
                 {
-                    object1 = (string)value;
+                    answer = (string)value;
                 }
                 else
                 {
-                    object2 = (string)value;
+                    resultProbability = (string)value;
                 }
             }
-            ViewBag.responceCall1 = object1;
-            ViewBag.responceCall2 = object2;
+            ViewBag.responceCall1 = answer;
+            ViewBag.responceCall2 = resultProbability;
+            ViewBag.responceCall3 = question;
+
+            var historyValues = new History
+            {
+                Question = question,
+                Answer = answer,
+                Probability = resultProbability,
+            };
+            repository.Historys.Create(historyValues);
+            repository.Save();
             return View();
+        }
+            [Route("History")]
+        public IActionResult History() //Displays all the records in the Teams table. 
+        {
+            var history = repository.Historys.FinalALL();
+            //var allTeams = dbContext.Teams.ToList();
+            return View(history);
         }
     }
 }

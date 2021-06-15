@@ -33,10 +33,37 @@ namespace Service4.Controllers
             var Service3ResponceCall = await new HttpClient().GetStringAsync(service3);
 
 
-            var Service4 = $"{Service2ResponceCall} {Service3ResponceCall}";
-            var result = "chicken";
+            var Service4 = $"{Service3ResponceCall}: {Service2ResponceCall}";
+            var resultProbability = probability(Service3ResponceCall);
 
-            return Ok(new {Service4, result});
+            return Ok(new {Service4, resultProbability});
+        }
+
+        private object probability(string Service3ResponceCall)
+        {
+            int resultProbability = 0;
+            switch (Service3ResponceCall)
+            {
+                case "A":
+                    resultProbability = 100;
+                    break;
+                case "B":
+                    resultProbability = 80;
+                    break;
+                case "C":
+                    resultProbability = 60;
+                    break;
+                case "D":
+                    resultProbability = 40;
+                    break;
+                case "E":
+                    resultProbability = 20;
+                    break;
+                default:
+                    resultProbability  = 404;
+                    break;
+            }
+            return resultProbability;
         }
     }
 }

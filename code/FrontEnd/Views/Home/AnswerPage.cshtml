@@ -1,0 +1,17 @@
+﻿@model FrontEnd.Models.History
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="display-4">The 8 Ball has spoken!</h1>
+<img src="/images/magic8balll.png" alt="HTML5 Icon">
+<h2> Question: @ViewBag.ResponceCall3</h2>
+<h2> Answer: @ViewBag.ResponceCall1</h2>
+<h2> Probability: @ViewBag.ResponceCall2%</h2>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AnswerPage">
+            <input type="submit" value="Ask Another Question" class="btn btn-primary" asp-controller="Home" asp-action="Index" />
+        </form>
+    </div>
+</div>
