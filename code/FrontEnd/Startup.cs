@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontEnd.Data;
@@ -15,11 +16,17 @@ using Microsoft.Extensions.Hosting;
 
 namespace FrontEnd
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IWebHostEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -31,6 +38,8 @@ namespace FrontEnd
             var myConnectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationDBContext>(options =>
             options.UseMySql(myConnectionString, ServerVersion.AutoDetect(myConnectionString)));
+            services.Configure<AppSettings>(options => Configuration.GetSection("AppSettings").Bind(options));
+            services.AddHttpClient();
             services.AddControllersWithViews();
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }

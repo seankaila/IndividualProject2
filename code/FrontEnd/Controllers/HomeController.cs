@@ -12,16 +12,20 @@ using RestSharp;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using FrontEnd.Interfaces;
+using Microsoft.Extensions.Options;
 
 namespace FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
-        public IConfiguration Configuration;
+        //public IConfiguration Configuration;
+        private AppSettings Configuration;
         private IRepositoryWrapper repository;
-        public HomeController(IConfiguration configuration, IRepositoryWrapper repositoryWrapper)
+        private HttpClient _client;
+        public HomeController(HttpClient client, IOptions<AppSettings> settings, IRepositoryWrapper repositoryWrapper)
         {
-            Configuration = configuration;
+            _client = client;
+            Configuration = settings.Value;
             repository = repositoryWrapper;
         }
 
@@ -37,9 +41,10 @@ namespace FrontEnd.Controllers
                 return RedirectToAction("Index");
             }
             //var service4 = "https://localhost:44377/service4";
-            var service4 = $"{Configuration["Service4URL"]}/service4";
+            //var service4 = $"{Configuration["Service4URL"]}/service4";
+            var service4 = $"{Configuration.Service4URL}/service4";
 
-            var Service4ResponceCall = await new HttpClient().GetStringAsync(service4);
+            var Service4ResponceCall = await _client.GetStringAsync(service4);
             dynamic data = JsonConvert.DeserializeObject<object>(Service4ResponceCall);
             IDictionary<string, JToken> results = data;
             int counter = 0;
@@ -74,10 +79,9 @@ namespace FrontEnd.Controllers
         }
 
         [Route("History")]
-        public IActionResult History() //Displays all the records in the Teams table. 
+        public IActionResult History() //Displays all the records in the hsitory table. 
         {
             var history = repository.Historys.FinalALL();
-            //var allTeams = dbContext.Teams.ToList();
             return View(history);
         }
     }

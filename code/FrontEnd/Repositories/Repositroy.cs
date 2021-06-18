@@ -3,12 +3,14 @@ using FrontEnd.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace FrontEnd.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class Repositroy<T> : IRepository<T> where T : class
     {
         protected ApplicationDBContext RepositoryContext { get; set; }
@@ -22,11 +24,6 @@ namespace FrontEnd.Repositories
             return RepositoryContext.Set<T>().Add(entity).Entity;
         }
 
-        public void Delete(T entity)
-        {
-            RepositoryContext.Set<T>().Remove(entity);
-        }
-
         public IEnumerable<T> FinalALL()
         {
             return RepositoryContext.Set<T>().AsNoTracking();
@@ -36,10 +33,5 @@ namespace FrontEnd.Repositories
         {
             return RepositoryContext.Set<T>().Where(expression).AsNoTracking();
         }
-        
-        public T Update(T entity)
-        {
-            return RepositoryContext.Set<T>().Update(entity).Entity;
-        } 
     }
 }

@@ -12,10 +12,5 @@ namespace FrontEnd.Interfaces
         IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression);
 
         T Create(T entity);
-
-        T Update(T entity);
-
-        void Delete(T entity);
-    
     }
 }
