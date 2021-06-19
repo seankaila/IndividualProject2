@@ -24,7 +24,7 @@ namespace FrontEnd.Controllers
         private HttpClient _client;
         public HomeController(HttpClient client, IOptions<AppSettings> settings, IRepositoryWrapper repositoryWrapper)
         {
-            _client = client;
+            _client = client ?? new HttpClient();
             Configuration = settings.Value;
             repository = repositoryWrapper;
         }

@@ -6,6 +6,7 @@ using FrontEnd;
 using FrontEnd.Controllers;
 using FrontEnd.Interfaces;
 using FrontEnd.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -47,6 +48,7 @@ namespace Magic8BallTest
             string question = "Will i join the army?";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
+            Moq.Language.Flow.IReturnsResult<IRepositoryWrapper> returnsResult = mockRepo.Setup(repo => repo.Historys.FindByCondition(h => h.ID == It.IsAny<int>())).Returns(GetHistorys);
             HomeController homeController = new HomeController(client, options.Object, mockRepo.Object);
             //Act
             var controllerActionResult = homeController.AnswerPage(question);
@@ -55,7 +57,7 @@ namespace Magic8BallTest
         }
 
         [Fact]
-        public void AnswerPageNoQuestion_Test()
+        public async void AnswerPageNoQuestion_Test()
         {
 
             //Arrange
@@ -63,7 +65,10 @@ namespace Magic8BallTest
             var options = new Mock<IOptions<AppSettings>>();
             var mockHttp = new MockHttpMessageHandler();
             var client = new HttpClient(mockHttp);
+            mockHttp.When("https://seanservice4.azurewebsites.net/service4")
+                .Respond("application/json", "{\"service4\":\"C: My reply is no\",\"resultProbability\":60}");
             options.Setup(x => x.Value).Returns(appSettings);
+            Moq.Language.Flow.IReturnsResult<IRepositoryWrapper> returnsResult = mockRepo.Setup(repo => repo.Historys.FindByCondition(h => h.ID == It.IsAny<int>())).Returns(GetHistorys);
             HomeController homeController = new HomeController(client, options.Object, mockRepo.Object);
             //Act
             var controllerActionResult = homeController.AnswerPage(question);

@@ -36,6 +36,7 @@ namespace Service4
             services.AddRouting(r => r.LowercaseUrls = true);
             services.AddControllers();
             services.Configure<AppSettings>(options => Configuration.GetSection("AppSettings").Bind(options));
+            services.AddHttpClient();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Service4", Version = "v1" });

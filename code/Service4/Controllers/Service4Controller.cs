@@ -11,8 +11,10 @@ namespace Service4.Controllers
         //service 2 https://localhost:44384/
         //service 3  https://localhost:44393/
         public AppSettings Configuration;
-        public Service4Controller(IOptions<AppSettings> settings)
+        private HttpClient _client;
+        public Service4Controller(HttpClient client, IOptions<AppSettings> settings)
         {
+            _client = client ?? new HttpClient();
             Configuration = settings.Value;
         }
 
@@ -30,8 +32,8 @@ namespace Service4.Controllers
             var service2 = $"{Configuration.Service2URL}/service2";
             var service3 = $"{Configuration.Service3URL}/service3";
 
-            var Service2ResponceCall = await new HttpClient().GetStringAsync(service2);
-            var Service3ResponceCall = await new HttpClient().GetStringAsync(service3);
+            var Service2ResponceCall = await _client.GetStringAsync(service2);
+            var Service3ResponceCall = await _client.GetStringAsync(service3);
 
 
             var Service4 = $"{Service3ResponceCall}: {Service2ResponceCall}";

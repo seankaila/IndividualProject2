@@ -225,7 +225,7 @@ var assemblies = [
     "name": "FrontEnd",
     "classes": [
       { "name": "FrontEnd.AppSettings", "rp": "FrontEnd_AppSettings.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 12, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "FrontEnd.Controllers.HomeController", "rp": "FrontEnd_HomeController.html", "cl": 47, "ucl": 2, "cal": 49, "tl": 88, "ct": "LineCoverage", "mc": "-", "cb": 14, "tb": 14, "lch": [], "bch": [], "hc": [] },
+      { "name": "FrontEnd.Controllers.HomeController", "rp": "FrontEnd_HomeController.html", "cl": 49, "ucl": 0, "cal": 49, "tl": 88, "ct": "LineCoverage", "mc": "-", "cb": 14, "tb": 14, "lch": [], "bch": [], "hc": [] },
       { "name": "FrontEnd.Models.History", "rp": "FrontEnd_History.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
   {
@@ -252,7 +252,7 @@ var assemblies = [
     "name": "Service4",
     "classes": [
       { "name": "Service4.AppSettings", "rp": "Service4_AppSettings.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Service4.Controllers.Service4Controller", "rp": "Service4_Service4Controller.html", "cl": 30, "ucl": 0, "cal": 30, "tl": 71, "ct": "LineCoverage", "mc": "-", "cb": 10, "tb": 10, "lch": [], "bch": [], "hc": [] },
+      { "name": "Service4.Controllers.Service4Controller", "rp": "Service4_Service4Controller.html", "cl": 31, "ucl": 0, "cal": 31, "tl": 73, "ct": "LineCoverage", "mc": "-", "cb": 10, "tb": 10, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 
