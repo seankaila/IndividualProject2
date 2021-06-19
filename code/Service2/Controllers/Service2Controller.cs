@@ -14,7 +14,7 @@ namespace Service2.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            string[] answers = new string[] {"It is Certain", "Without a doubt", "You may rely on it", "Most likely", "Don't count on it", "My reply is no", "My sources say no", "Very doubtful"};
+            string[] answers = new string[] { "It is decidedly so.", "Without a doubt", "Yes definitely", "You may rely on it", "Better not tell you now.", "Outlook not so good", "Hell no", "Never going to happen"};
             Random random = new Random();
             int index = random.Next(answers.Length);
             var S2 = $"{answers[index]}";

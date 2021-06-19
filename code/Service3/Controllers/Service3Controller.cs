@@ -14,7 +14,7 @@ namespace Service3.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            char[] Quality  = { 'A','B', 'C', 'D', 'E'};
+            char[] Quality  = { 'Z','Y', 'X', 'W', 'V'};
             Random random = new Random();
             int index = random.Next(Quality.Length);
             var S3 = $"{Quality[index]}";

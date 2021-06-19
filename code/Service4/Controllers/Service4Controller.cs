@@ -48,20 +48,20 @@ namespace Service4.Controllers
             int resultProbability = 0;
             switch (Service3ResponceCall)
             {
-                case "A":
-                    resultProbability = 100;
+                case "Z":
+                    resultProbability = 95;
                     break;
-                case "B":
-                    resultProbability = 80;
+                case "Y":
+                    resultProbability = 75;
                     break;
-                case "C":
-                    resultProbability = 60;
+                case "X":
+                    resultProbability = 55;
                     break;
-                case "D":
-                    resultProbability = 40;
+                case "W":
+                    resultProbability = 35;
                     break;
-                case "E":
-                    resultProbability = 20;
+                case "V":
+                    resultProbability = 15;
                     break;
                 default:
                     resultProbability  = 404;
