@@ -44,6 +44,7 @@ namespace Magic8BallTest
 
             Assert.NotNull(controllerActionResult);
             Assert.IsType<OkObjectResult>(controllerActionResult);
+            //test
         }
         [Fact]
         public void ProbabilityA_Test()
