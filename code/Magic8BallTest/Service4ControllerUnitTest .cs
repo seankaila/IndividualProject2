@@ -110,7 +110,7 @@ namespace Magic8BallTest
         public void ProbabilityV_Test()
         {
             //Arrange
-            string Service3ResponceCall = "V    ";
+            string Service3ResponceCall = "V";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
             var mockHttp = new MockHttpMessageHandler();
