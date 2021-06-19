@@ -46,10 +46,10 @@ namespace Magic8BallTest
             Assert.IsType<OkObjectResult>(controllerActionResult);
         }
         [Fact]
-        public void ProbabilityA_Test()
+        public void ProbabilityZ_Test()
         {
             //Arrange
-            string Service3ResponceCall = "A";
+            string Service3ResponceCall = "Z";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
             var mockHttp = new MockHttpMessageHandler();
@@ -62,10 +62,10 @@ namespace Magic8BallTest
         }
 
         [Fact]
-        public void ProbabilityB_Test()
+        public void ProbabilityW_Test()
         {
             //Arrange
-            string Service3ResponceCall = "B";
+            string Service3ResponceCall = "W";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
             var mockHttp = new MockHttpMessageHandler();
@@ -77,10 +77,10 @@ namespace Magic8BallTest
             Assert.IsType<int>(controllerActionResult);
         }
         [Fact]
-        public void ProbabilityC_Test()
+        public void ProbabilityX_Test()
         {
             //Arrange
-            string Service3ResponceCall = "C";
+            string Service3ResponceCall = "X";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
             var mockHttp = new MockHttpMessageHandler();
@@ -92,10 +92,10 @@ namespace Magic8BallTest
             Assert.IsType<int>(controllerActionResult);
         }
         [Fact]
-        public void ProbabilityD_Test()
+        public void ProbabilityY_Test()
         {
             //Arrange
-            string Service3ResponceCall = "D";
+            string Service3ResponceCall = "Y";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
             var mockHttp = new MockHttpMessageHandler();
@@ -107,10 +107,10 @@ namespace Magic8BallTest
             Assert.IsType<int>(controllerActionResult);
         }
         [Fact]
-        public void ProbabilityE_Test()
+        public void ProbabilityV_Test()
         {
             //Arrange
-            string Service3ResponceCall = "E";
+            string Service3ResponceCall = "V    ";
             var options = new Mock<IOptions<AppSettings>>();
             options.Setup(x => x.Value).Returns(appSettings);
             var mockHttp = new MockHttpMessageHandler();
