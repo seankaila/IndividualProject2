@@ -77,6 +77,9 @@ During the duration of the project, I was using a feature branch model to manage
 
 
 ## Final Functioning Front-End
+![image](https://user-images.githubusercontent.com/82107182/122682754-3ae0c800-d1f3-11eb-9187-1e13da03184a.png)
+![image](https://user-images.githubusercontent.com/82107182/122682783-5b108700-d1f3-11eb-984f-fe265a53d6f6.png)
+![image](https://user-images.githubusercontent.com/82107182/122682797-7085b100-d1f3-11eb-87fc-e70f4ed37a12.png)
 
 
 
