@@ -34,6 +34,8 @@ namespace FrontEnd.Controllers
         {
             return View();
         }
+
+        [Route("AnswerPage")]
         public async Task<IActionResult> AnswerPage(string question)
         {
             if (question == null)
