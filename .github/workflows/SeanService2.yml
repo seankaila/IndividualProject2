@@ -5,7 +5,7 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: SeanService2
-  AZURE_WEBAPP_PACKAGE_PATH: Service2/publish
+  AZURE_WEBAPP_PACKAGE_PATH: ./code/Service2/publish
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.SeanService2_9b8e }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
