@@ -12,7 +12,7 @@ namespace Service2
 {
     [ExcludeFromCodeCoverage]
     public class Program
-    {
+    { //hello
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
