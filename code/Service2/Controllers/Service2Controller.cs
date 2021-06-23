@@ -13,12 +13,12 @@ namespace Service2.Controllers
     {
         [HttpGet]
         public ActionResult<string> Get()
-        {
-            string[] answers = new string[] {"It is Certain", "Without a doubt", "You may rely on it", "Most likely", "Don't count on it", "My reply is no", "My sources say no", "Very doubtful"};
-            Random random = new Random();
-            int index = random.Next(answers.Length);
-            var S2 = $"{answers[index]}";
-            return S2.ToString();
+        { //This function creates an array of answers. and generates a random output based on the array.
+            string[] answers = new string[] {"It is Certain", "Without a doubt", "You may rely on it", "Most likely", "Don't count on it", "My reply is no", "My sources say no", "Very doubtful"}; 
+            Random random = new Random(); 
+            int index = random.Next(answers.Length); //using the random function to grab a random number from the array.
+            var S2 = $"{answers[index]}"; //grabbing the actual answer from the array using the random number
+            return S2.ToString(); //returning the value as a string.
         }
     }
 }
