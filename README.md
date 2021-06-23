@@ -43,7 +43,7 @@ This diagram describes how a user will typically use the system.
 To track and understand the progress of my project I used Azure Devops to create a Kanban Board. This board was split up into different sections.
 
 - Epics: These are high level categories each user story refers to. 
-- ![image](https://user-images.githubusercontent.com/82107182/123100387-fd667f80-d42a-11eb-93eb-679ada12d48e.png)
+ ![image](https://user-images.githubusercontent.com/82107182/123100387-fd667f80-d42a-11eb-93eb-679ada12d48e.png)
 - User Stories: These are derived from the Epics, detailing what a user what’s to do and why they want to do that action. 
 - Tasks: These contain low level tasks needed for a user story / epic to be deemed completed.
  ![image](https://user-images.githubusercontent.com/82107182/123101003-84b3f300-d42b-11eb-9152-85c5319800cc.png)
@@ -60,15 +60,24 @@ To track and understand the progress of my project I used Azure Devops to create
 Link to Kanban Board: https://dev.azure.com/dharmindraskaila/Individual-Project-2/_boards/board/t/Individual-Project-2%20Team/Stories
 
 ### Risk Management
-
+![image](https://user-images.githubusercontent.com/82107182/123129184-a7ea9c80-d443-11eb-8a28-66a212532bcd.png)
 A simple risk assessment was performed during the project. Each risk was described and evaluated along with a rating to understand the severity of the risk. To expand upon this, I provided an update to each risk checking to see if they changed in anyway.
 
 
 ## Testing
-
+![image](https://user-images.githubusercontent.com/82107182/123129423-d799a480-d443-11eb-8b87-cb056eb5409f.png)
+Like the last project, the AAA testing pattern was used to create appropriate tests for each service of the project. As we can see, all 13 tests passed spanning 4 different countrollers (3 web apis & 1 web app). A range of tests were included within this project. For example: Testings what would happen if a user didnt enter a question. 
 
 ### Code Coverage Report
+![image](https://user-images.githubusercontent.com/82107182/123132743-f77e9780-d446-11eb-8bff-5bd020554cd5.png)
+From the summary above we can see that the overall code coverage of the project is sitting at a strong 73.4%. This is a massive improvement from the last project as code that shouldnt be tested isnt being covered by the report generator. Giving us a better understand of the potential areas of consern. This number could have been higher but the views havent been tested. This negatively affecting the coverage. To Test the views, integration testing was be taught but due to time it wasnt. 
 
+![image](https://user-images.githubusercontent.com/82107182/123133520-b935a800-d447-11eb-9353-162a0c0bf30e.png)
+As we can see every controller tested had a code coverage of 100%. This a really good because it means that main logic within the app doesnt have any run times errors. But may be suceptable to logical errors that i didnt account for or see. A way to fully understand the logical errors would be by conducting integration tests, which encoperate inputs from the front end.
+
+![image](https://user-images.githubusercontent.com/82107182/123136078-70332300-d44a-11eb-8149-9df7c6147b90.png)
+![image](https://user-images.githubusercontent.com/82107182/123136318-b5efeb80-d44a-11eb-99de-22a44cf43e91.png)
+Strangly, one area not being covered in my tests was this history class. Used for mapping data for the database. The class above is being referenced by two tests but its not being coverded by the code coverage. This is something i cannot explain.
 
 ## Continuous Integration Pipeline and Best Practices
 
