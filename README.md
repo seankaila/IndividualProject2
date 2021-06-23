@@ -53,7 +53,8 @@ To track and understand the progress of my project I used Azure Devops to create
 - New: Here User stories that needed to be started were stored here.
 - Active: stories that were currently being worked on.
 - Closed: User stories and tasks that were completed.
-![image](https://user-images.githubusercontent.com/82107182/123100128-ba0c1100-d42a-11eb-8d03-0e40a4ac981f.png)
+![image](https://user-images.githubusercontent.com/82107182/123111345-bed5c280-d434-11eb-84c5-96f56e802939.png)
+
 
 
 Link to Kanban Board: https://dev.azure.com/dharmindraskaila/Individual-Project-2/_boards/board/t/Individual-Project-2%20Team/Stories
