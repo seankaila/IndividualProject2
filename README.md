@@ -122,6 +122,8 @@ A very simple branching model was used within this project. As the user requirem
 - On an IOS device a user can refresh the answer page by "submitting the form again" button producing multiple entries to the database. To fix this I would do some further testing with mobiles in mind.
 - Find a way to test the views in the future. As the front end is just as important as the back end and needs testing too.
 - Make use of variables more efficiently in terraform files. As a simple solution of duplicating the same Webapp with a different name was used in this project. Therefore, there is redundant configuration in each webapp at this moment of time.
+- GitHub Actions can sometimes be down. Therefore, you won’t be able to deploy your recent changes. This is something out of my control. In the event this happens during the presentation, then referrer to a video I have made. Here you will see me making a change via a branch and deploying that change. 
+![image](https://user-images.githubusercontent.com/82107182/123218166-4d912080-d4c3-11eb-8bfb-dbfa768bd43a.png)
 
 ## Final Functioning Front-End
 ![image](https://user-images.githubusercontent.com/82107182/122682754-3ae0c800-d1f3-11eb-9187-1e13da03184a.png)
